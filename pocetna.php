@@ -1,3 +1,19 @@
+<?php
+    
+    error_reporting( error_reporting() & ~E_NOTICE);
+    include("server/server.php");
+    if(!empty($_SESSION['success'])){
+        echo $_SESSION['success'];
+        unset($_SESSION['success']);
+    }
+    if(!empty($_SESSION['loggedout'])){
+        echo $_SESSION['loggedout'];
+        unset($_SESSION['loggedout']);
+    }
+     
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +28,11 @@
 </head>
 
 <body>
+
+
+    
+
+
     <div class="container">
         <div id="snow_fall"></div>
         <div class="menu">
@@ -22,7 +43,12 @@
                 <li>Hrana</li>
                 <li>Destinacije</li>
                 <li>Dekoracija</li>
-                <li><a href="#" class="signup-btn"><span>Prijavi se</span></a></li>
+                <?php if(isset($_SESSION['username'])){ ?>
+                    <a href="http://localhost:8080/fonisInterniHakaton/pocetna.php?logout=1" class="register">Logout</a>
+                <?php }else{?>
+                    <li><a href="server/login.php" class="signup-btn"><span>Uloguj Se</span></a></li>
+                    <li><a href="server/register.php" class="signup-btn"><span>Registruj Se</span></a></li>
+                <?php } ?>
             </ul>
         </div>
         <div class="tata">
