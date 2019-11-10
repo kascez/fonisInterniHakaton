@@ -1,3 +1,18 @@
+<?php 
+
+    error_reporting( error_reporting() & ~E_NOTICE);
+
+    include("server.php");
+    include("messages.php");
+
+    /* ********************** GET USER FROM DB ************************ */
+
+    $query = "SELECT * FROM users";
+    $result = mysqli_query($db, $query);
+    $user = mysqli_fetch_assoc($result);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,57 +20,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../loginCSS.css">
+    <script src="https://kit.fontawesome.com/5c5689b7a2.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <div id="container">
-    <h1>&bull; Login Here &bull;</h1>
+    <h1 class="h1">&bull; Uloguj Se &bull;</h1>
     <div class="underline">
     </div>
     <div class="icon_wrapper">
-      <img class="icon" src="{{asset('img/dog.png')}}">
+      <i class="fas fa-gift presentIcon"></i>
     </div>
     <div class="row">
-      @include('includes/messages')
-      <form method="POST" action="{{ route('login') }}" id="contact_form">
-        @csrf
-        <div class="col-md-12">        
-          <input id="email" type="email" placeholder="Email" class="{{ $errors->has('email') ? 'is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-          {{-- (name, value, 'attributes') --}}
-          {{-- @if ($errors->has('email'))
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $errors->first('email') }}</strong>
-            </span>
-          @endif --}}
+    <div class="error-input wrong-comb">
+        <?php 
+            if($wrongCombination){ ?>
+                <i class="fa fa-times-circle"></i>
+                <?php writeMessage('Pogrešna kombinacija.');
+            }
+        ?>
+    </div>
+      <form method="POST" id="contact_form">
+      <div class="error-input">
+        <?php 
+            if($missingUsername){ ?>
+                <i class="fa fa-times-circle"></i>
+                <?php writeMessage('Polje "Nadimak" je obavezno.');
+            }
+        ?>
         </div>
         <div class="col-md-12">        
-          <input id="password" type="password" placeholder="Password" class="{{ $errors->has('password') ? 'is-invalid' : '' }}" name="password" required>
-          {{-- (name, value, 'attributes') --}}
-          {{-- @if ($errors->has('password'))
+          <input id="username" type="text" placeholder="Nadimak" class="is-invalid" name="username" value="">
             <span class="invalid-feedback" role="alert">
-              <strong>{{ $errors->first('password') }}</strong>
+                <strong></strong>
             </span>
-          @endif --}}
         </div>
-        <div class="col-md-12">
-          <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-              <label class="form-check-label" for="remember">
-                  {{ __('Remember Me') }}
-              </label>
-          </div>
+        <div class="error-input">
+        <?php 
+            if($missingPassword){ ?>
+                <i class="fa fa-times-circle"></i>
+                <?php writeMessage('Polje "Šifra" je obavezno.');
+            }
+        ?>
+        </div>
+        <div class="col-md-12">        
+          <input id="password" type="password" placeholder="Šifra" class="is-invalid" name="password">
+            <span class="invalid-feedback" role="alert">
+            </span>
         </div>
         <div class="submit col-md-12">
-            <button type="submit" id="form_button">
-                {{ __('Login') }}
+            <button type="submit" id="form_button" name="login">
+                Uloguj Se
             </button>
         </div>
         <div class="col-md-12 go-back">
-          <a href="{{url('/')}}">Home | </a>
-          <a href="{{ URL::previous() }}">Go Back | </a>
-          <a href="{{ url('/register') }}">Register</a>
+          <a href="../">Početna | </a>
+          <a href="../">Nazad | </a>
+          <a href="register.php">Registruj Se</a>
         </div>      
       </form><!-- // End form -->
     </div>

@@ -1,3 +1,21 @@
+<?php
+    
+    error_reporting( error_reporting() & ~E_NOTICE);
+    include("server/server.php");
+
+    if(!empty($_SESSION['success'])){
+        echo $_SESSION['success'];
+        unset($_SESSION['success']);
+    }
+
+    if(!empty($_SESSION['loggedout'])){
+        echo $_SESSION['loggedout'];
+        unset($_SESSION['loggedout']);
+    }
+     
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +25,19 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="server/login.php">login</a><br>
-    <a href="server/register.php">register</a>
+
+    <?php if(isset($_SESSION['username'])){ ?>
+        <a href="http://localhost:8080/fonisInterniHakaton/index.php?logout=1" class="register">Logout</a>
+    <?php }else{?>
+        <a href="server/login.php">Login</a><br>
+        <a href="server/register.php">Register</a><br>
+    <?php } ?>
+
+
+
+<br><br><br><br>
+    <a href="server/login.php">Login</a><br>
+    <a href="server/register.php">Register</a><br>
+    <a href="http://localhost:8080/fonisInterniHakaton/index.php?logout=1" class="register">Logout</a>
 </body>
 </html>
