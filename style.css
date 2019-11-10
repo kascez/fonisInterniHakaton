@@ -25,7 +25,8 @@
 
 .signup-btn {
     text-decoration: none;
-    color: #397043;
+    color: #272b36;
+    font-weight: 700;
 }
 
 #snow_fall {
@@ -36,6 +37,20 @@
     background-size: cover;
     opacity: 0.8;
 }
+
+/* AUDIO */
+
+/* .song{
+    display: inline-block !important;
+    width: 400px;
+} */
+
+.audio{
+    position: absolute;
+    right: 100px;
+    top: 55px;
+}
+
 
 .logo img {
     width: 40px;
