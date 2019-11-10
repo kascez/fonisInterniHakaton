@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" href="hranastyle.css">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="djumbir.jpg">
+                </div>
+                <div class="details">
+                    <h3>Kolacic od djumbira<br><span>All Time Favourite</span></h3>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="cevapi.jpg">
+                </div>
+                <div class="details">
+                    <h3>Ćevapi<br><span>All Time Favourite</span></h3>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="cimet.jpg">
+                </div>
+                <div class="details">
+                    <h3>Rolnice od cimeta<br><span>All Time Favourite</span></h3>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="domaci-ajvar.jpg">
+                </div>
+                <div class="details">
+                    <h3>Domaći ajvar<br><span>All Time Favourite</span></h3>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="peglane.png">
+                </div>
+                <div class="details">
+                    <h3>Peglane kobasice<br><span>All Time Favourite</span></h3>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="rolat.jpg">
+                </div>
+                <div class="details">
+                    <h3>Rolat<br><span>All Time Favourite</span></h3>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="ruska.jpg">
+                </div>
+                <div class="details">
+                    <h3>Ruska salata<br><span>All Time Favourite</span></h3>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="sarme.jpg">
+                </div>
+                <div class="details">
+                    <h3>Sarme<br><span>All Time Favourite</span></h3>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="sence.jpg">
+                </div>
+                <div class="details">
+                    <h3>Pečenje<br><span>All Time Favourite</span></h3>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="sopska.jpg">
+                </div>
+                <div class="details">
+                    <h3>Šopska<br><span>All Time Favourite</span></h3>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script type="text/javascript" src="swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+</body>
+
+</html>
