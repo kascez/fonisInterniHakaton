@@ -1,3 +1,23 @@
+<?php
+    
+    error_reporting( error_reporting() & ~E_NOTICE);
+    include("server/server.php");
+    if(!empty($_SESSION['success'])){
+        echo $_SESSION['success'];
+        unset($_SESSION['success']);
+    }
+    if(!empty($_SESSION['loggedout'])){
+        echo $_SESSION['loggedout'];
+        unset($_SESSION['loggedout']);
+    }
+     
+ ?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +30,31 @@
 </head>
 
 <body>
+
+<div class="container">
+        <div id="snow_fall"></div>
+        <div class="menu">
+            <ul style="margin-top: 70px; text-transform:uppercase;">
+                <li class="logo"><img src="Logo.png"></li>
+                <li class="active"><a href="pocetna.php">Početna</a> </li>
+                <li><a href="indexF.php">Filmovi</a></li>
+                <li><a href="hrana.php">Hrana</a> </li>
+                <li><a href="#">Destinacije</a> </li>
+                <li><a href="dekoracija.php">Dekoracija</a> </li>
+                <?php if(isset($_SESSION['username'])){ ?>
+                    <li><a href="http://localhost:8080/fonisInterniHakaton/pocetna.php?logout=1" class="signup-btn"><span>Izloguj Se (<?php echo $currentUserUsername; ?>)</span></a></li>
+                <?php }else{?>
+                    <li><a href="server/login.php" class="signup-btn"><span>Uloguj Se</span></a></li>
+                    <li><a href="server/register.php" class="signup-btn"><span>Registruj Se</span></a></li>
+                <?php } ?>
+                <div class="song"></div>
+                <audio class="audio" controls preload="metadata">
+                    <source src = "nzm.mp3" type="audio/ogg">
+                </audio>
+            </ul>
+        </div>
+
+
     <h1>DEKORACIJA</h1>
   
     <div class="kuca">

@@ -37,12 +37,12 @@
         <div id="snow_fall"></div>
         <div class="menu">
             <ul style="margin-top: 70px; text-transform:uppercase;">
-                <li class="logo"><img src="drvo.png"></li>
+                <li class="logo"><img src="Logo.png"></li>
                 <li class="active"><a href="pocetna.php">Početna</a> </li>
-                <li><a href="indexF.html">Filmovi</a></li>
-                <li><a href="index2.html">Hrana</a> </li>
+                <li><a href="indexF.php">Filmovi</a></li>
+                <li><a href="hrana.php">Hrana</a> </li>
                 <li><a href="#">Destinacije</a> </li>
-                <li><a href="dekoracija.html">Dekoracija</a> </li>
+                <li><a href="dekoracija.php">Dekoracija</a> </li>
                 <?php if(isset($_SESSION['username'])){ ?>
                     <li><a href="http://localhost:8080/fonisInterniHakaton/pocetna.php?logout=1" class="signup-btn"><span>Izloguj Se (<?php echo $currentUserUsername; ?>)</span></a></li>
                 <?php }else{?>
@@ -54,8 +54,8 @@
                     <source src = "nzm.mp3" type="audio/ogg">
                 </audio>
             </ul>
-           
         </div>
+
         <div class="tata">
             <div class="app-text">
                 <h1>Srećna Nova Godina!!!</h1>
