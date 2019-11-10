@@ -44,7 +44,7 @@
                 <li>Destinacije</li>
                 <li>Dekoracija</li>
                 <?php if(isset($_SESSION['username'])){ ?>
-                    <a href="http://localhost:8080/fonisInterniHakaton/pocetna.php?logout=1" class="register">Logout</a>
+                    <li><a href="http://localhost:8080/fonisInterniHakaton/pocetna.php?logout=1" class="register"><span>Izloguj Se</span></a></li>
                 <?php }else{?>
                     <li><a href="server/login.php" class="signup-btn"><span>Uloguj Se</span></a></li>
                     <li><a href="server/register.php" class="signup-btn"><span>Registruj Se</span></a></li>
