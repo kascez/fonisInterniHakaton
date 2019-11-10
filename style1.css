@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +7,8 @@
 
 body{   
     background-color: #f2dbb3;
+    font-family: 'Montserrat', sans-serif !important;
+
 
 }
 h1{
@@ -18,7 +22,7 @@ h1{
     margin: 0 7.5vw;
 }
 .kuca img:nth-child(2){
-    margin: 0 5vw;
+    margin: 0 2vw;
 }
 .kuca img{
     transition: all .4s;
@@ -39,7 +43,7 @@ h1{
     display: inline-block;
     width: 24vw;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     color: #272b36;
     }
 .opis{
@@ -164,6 +168,6 @@ border-radius:7px 7px 7px 7px ;
 
 .audio{
   position: absolute;
-  right: 100px;
+  right: 40px;
   top: 55px;
 }

@@ -1,3 +1,20 @@
+<?php
+    
+    error_reporting( error_reporting() & ~E_NOTICE);
+    include("server/server.php");
+    if(!empty($_SESSION['success'])){
+        echo $_SESSION['success'];
+        unset($_SESSION['success']);
+    }
+    if(!empty($_SESSION['loggedout'])){
+        echo $_SESSION['loggedout'];
+        unset($_SESSION['loggedout']);
+    }
+     
+ ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +38,7 @@
                 <li><a href="dekoracija.php">Dekoracija</a> </li>
                 <li><a href="pokloni.php">Pokloni</a> </li>
                 <?php if(isset($_SESSION['username'])){ ?>
-                    <li><a href="http://localhost:8080/fonisInterniHakaton/pocetna.php?logout=1" class="signup-btn"><span>Izloguj Se (<?php echo $currentUserUsername; ?>)</span></a></li>
+                    <li><a href="http://localhost/fonisInterniHakaton/pocetna.php?logout=1" class="signup-btn"><span>Izloguj Se (<?php echo $currentUserUsername; ?>)</span></a></li>
                 <?php }else{?>
                     <li><a href="server/login.php" class="signup-btn"><span>Uloguj Se</span></a></li>
                     <li><a href="server/register.php" class="signup-btn"><span>Registruj Se</span></a></li>

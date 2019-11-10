@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .menu {
@@ -208,6 +210,6 @@ border-radius:7px 7px 7px 7px ;
 
 .audio{
   position: absolute;
-  right: 100px;
+  right: 30px;
   top: 55px;
 }

@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 body{
     background: #272b36;
+    font-family: 'Montserrat', sans-serif !important;
+
 }
 
 .wrapper div{
@@ -129,6 +133,7 @@ border-radius:7px 7px 7px 7px ;
 
 .audio{
   position: absolute;
-  right: 100px;
+  right: 40px;
   top: 55px;
+  width: 200px;
 }
