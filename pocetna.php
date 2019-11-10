@@ -49,6 +49,10 @@
                     <li><a href="server/login.php" class="signup-btn"><span>Uloguj Se</span></a></li>
                     <li><a href="server/register.php" class="signup-btn"><span>Registruj Se</span></a></li>
                 <?php } ?>
+                <div class="song"></div>
+                <audio autoplay>
+                    <source src = "nzm.mp3" type="audio/mpeg">
+                </audio>
             </ul>
         </div>
         <div class="tata">
