@@ -39,7 +39,7 @@
                 <li class="active"><a href="pocetna.php">Početna</a> </li>
                 <li><a href="indexF.php">Filmovi</a></li>
                 <li><a href="hrana.php">Hrana</a> </li>
-                <li><a href="#">Destinacije</a> </li>
+                <li><a href="destinacije.php">Destinacije</a> </li>
                 <li><a href="dekoracija.php">Dekoracija</a> </li>
                 <?php if(isset($_SESSION['username'])){ ?>
                     <li><a href="http://localhost:8080/fonisInterniHakaton/pocetna.php?logout=1" class="signup-btn"><span>Izloguj Se (<?php echo $currentUserUsername; ?>)</span></a></li>
