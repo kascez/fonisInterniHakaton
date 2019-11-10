@@ -45,7 +45,7 @@
         ?>
         </div>
         <div class="col-md-12">        
-          <input id="name_input" placeholder="Nadimak" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}" name="username" value=""  autofocus>
+          <input id="name_input" placeholder="Nadimak" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}" name="username" value="<?php if($_POST['username']) echo $_POST['username']; ?>"  autofocus>
               <span class="invalid-feedback" role="alert">
                   <strong></strong>
               </span>
@@ -67,7 +67,7 @@
         ?>
         </div>
         <div class="col-md-12">        
-          <input id="email" type="email" placeholder="Email" class="{{ $errors->has('email') ? 'is-invalid' : '' }}" name="email" value="" >
+          <input id="email" type="email" placeholder="Email" class="{{ $errors->has('email') ? 'is-invalid' : '' }}" name="email" value="<?php if($_POST['email']) echo $_POST['email']; ?>" >
             <span class="invalid-feedback" role="alert">
             </span>
         </div>

@@ -38,20 +38,20 @@
         <div class="menu">
             <ul style="margin-top: 70px; text-transform:uppercase;">
                 <li class="logo"><img src="drvo.png"></li>
-                <li class="active">Početna</li>
-                <li>Filmovi</li>
-                <li>Hrana</li>
-                <li>Destinacije</li>
-                <li>Dekoracija</li>
+                <li class="active"><a href="pocetna.php">Početna</a> </li>
+                <li><a href="indexF.html">Filmovi</a></li>
+                <li><a href="index2.html">Hrana</a> </li>
+                <li><a href="#">Destinacije</a> </li>
+                <li><a href="dekoracija.html">Dekoracija</a> </li>
                 <?php if(isset($_SESSION['username'])){ ?>
-                    <li><a href="http://localhost:8080/fonisInterniHakaton/pocetna.php?logout=1" class="signup-btn"><span>Izloguj Se</span></a></li>
+                    <li><a href="http://localhost:8080/fonisInterniHakaton/pocetna.php?logout=1" class="signup-btn"><span>Izloguj Se (<?php echo $currentUserUsername; ?>)</span></a></li>
                 <?php }else{?>
                     <li><a href="server/login.php" class="signup-btn"><span>Uloguj Se</span></a></li>
                     <li><a href="server/register.php" class="signup-btn"><span>Registruj Se</span></a></li>
                 <?php } ?>
                 <div class="song"></div>
-                <audio class="audio" controls>
-                    <source src = "nzm.mp3" type="audio/mpeg">
+                <audio class="audio" controls preload="metadata">
+                    <source src = "nzm.mp3" type="audio/ogg">
                 </audio>
             </ul>
            

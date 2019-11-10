@@ -46,7 +46,7 @@
         ?>
         </div>
         <div class="col-md-12">        
-          <input id="username" type="text" placeholder="Nadimak" class="is-invalid" name="username" value="">
+          <input id="username" type="text" placeholder="Nadimak" class="is-invalid" name="username" value="<?php if($_POST['username']) echo $_POST['username']; ?>">
             <span class="invalid-feedback" role="alert">
                 <strong></strong>
             </span>
