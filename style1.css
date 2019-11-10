@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{   
+    background-color: #f2dbb3;
+
+}
+h1{
+    text-align: center ;
+    font-size: 160px;
+    color: #272b36;
+    text-shadow: 1px 1px 2px black, 0 0 25px #272b36, 0 0 5px darkblue;
+    margin: 0 0 110px 0;
+    }
+.kuca{
+    margin: 0 7.5vw;
+}
+.kuca img:nth-child(2){
+    margin: 0 6vw;
+}
+.kuca img{
+    transition: all .4s;
+}
+.kuca img:hover{
+    transform: scale(1.05);
+}
+.slika{
+ width: 24vw;
+ max-height: 490px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.opis h3:nth-child(2){
+    margin: 0 6vw;
+}
+.opis h3{
+    display: inline-block;
+    width: 24vw;
+    text-align: center;
+    font-size: 30px;
+    color: #272b36;
+    }
+.opis{
+    display: block;
+    margin: 0 7.5vw;
+}
+
+
+.popup-wrapper{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.6);
+}
+
+.popup{
+    width: 80vw;
+    height: 80vh;
+
+    /* background: blue; */
+}
+
+.popup-wrapper.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slike {
+    display: none;
+}
+.popup img{
+    width:25% ;
+    height:50% ;
+}
