@@ -7,7 +7,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: #f2dbb3;
-    background-image: url("poz.jpg");
+    background-color: #f2dbb3;
+    /* background-image: url("poz.jpg"); */
 }
 
 .card {
@@ -20,6 +21,7 @@ body {
     border: #c22911 2px solid;
     width: 500px;
     margin: 0 auto;
+    color: #fff;
 }
 
 
@@ -131,12 +133,7 @@ body {
     box-sizing: border-box;
 }
 
-body {
-    background-color: #272b36;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: #f2dbb3;
-}
+
 
 .card {
     /* Add shadows to create the "card" effect */
@@ -160,7 +157,7 @@ body {
 
 .naslov {
     font-size: 72px;
-    color: #f2dbb3;
+    color: #fff;
     text-align: center;
 }
 
